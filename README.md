@@ -134,4 +134,9 @@ const numberOrString = (value: number | string): string => {
     if (typeof value === 'string') return 'string'   
     if (isNumber(value)) return 'number'    
     return createError('This should never happen!')   
-}    
+}   
+#### union type   
+let age: number | string | boolean | [] = 56;
+##### Only value as a type to access only that particular value  
+let myName: "Sojib" | "Saiful" = "Sojib";
+myName = "Saiful"
