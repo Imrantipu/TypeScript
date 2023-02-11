@@ -27,4 +27,36 @@ let postId: string | number
 1. array of all element string :  let bands: string[] = []  > let bands = ['one', 'hey', 'Dave']
 2. all element string or number : let bands: (string | number)[] > let bands = ['State', 'Les Paul', 5150]  
 ##### Tuple  
-let myTuple: [string, number, boolean] = ['Dave', 42, true]
+let myTuple: [string, number, boolean] = ['Dave', 42, true]  
+#### Objects  
+1. initialize a type as object >  let myObj: object = {}  
+2. object prototype > type can be used instead  of interface  
+interface Guitarist {
+       <!-- name property can be optional -->
+    name?: string,   
+    active: boolean,   
+    albums: (string | number)[]   
+}   
+3. Access the prototype    
+let evh: Guitarist = {  
+    name: 'Eddie',   
+    active: false,   
+    albums: [1984, 5150, 'OU812']   
+}   
+4. Object type as a parameter  
+const greetGuitarist = (guitarist: Guitarist) => {  
+    if (guitarist.name) {   
+        return `Hello ${guitarist.name.toUpperCase()}!`   
+    }   
+    return 'Hello!'  
+}  
+console.log(greetGuitarist(evh))    
+5.  Enum  will only show index value accordingly   
+enum Grade {  
+    U = 1,  
+    D,  
+    C,  
+    B,  
+    A,  
+}
+console.log(Grade.U); > Output : 1 
