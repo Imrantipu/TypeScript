@@ -12,8 +12,8 @@ Folder name : src(for all raw code like ...ts files)
 1. create tsconfig.json file with this command : tsc --init  
 2. make changes in tsconfig.json for root derectory("rootDir": "./src") and output derectory("outDir": "./build/js")
 3. To watch all changes with this command :   tsc -w  
-##### To restrict .ts to .js files other then src , additional lines needed in tsconfig.json file  
+##### To restrict .ts to .js files other then src , additional line needed in tsconfig.json file  
 "include": ["src"]   
-##### To restrict aotocompile in js files from ts file is ts file has an arror, one change is neede in tsconfig.json file  
+##### To restrict aotocompile in js files from ts file ,if ts file has an error, one change is needed in tsconfig.json file  
 1.  "noEmitOnError": true  
 2.  Or run command : tsc --noEmitOnError -w  
