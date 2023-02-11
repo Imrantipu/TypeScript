@@ -25,4 +25,6 @@ let re: RegExp = /\w+/g
 let postId: string | number  
 ##### Array example   
 1. array of all element string :  let bands: string[] = []  > let bands = ['one', 'hey', 'Dave']
-2. all element string or number : let bands: (string | number)[] > let bands = ['State', 'Les Paul', 5150]
+2. all element string or number : let bands: (string | number)[] > let bands = ['State', 'Les Paul', 5150]  
+##### Tuple  
+let myTuple: [string, number, boolean] = ['Dave', 42, true]
