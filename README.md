@@ -17,3 +17,9 @@ Folder name : src(for all raw code like ...ts files)
 ##### To restrict aotocompile in js files from ts file ,if ts file has an error, one change is needed in tsconfig.json file  
 1.  "noEmitOnError": true  
 2.  Or run command : tsc --noEmitOnError -w  
+##### explicitly declare variables  
+let myName: string = 'Dave'  
+let album: any;  
+let re: RegExp = /\w+/g  
+##### Union data type  
+let postId: string | number
