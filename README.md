@@ -11,4 +11,4 @@ Folder name : src(for all raw code like ...ts files)
 ##### To maintain automatic changes from .ts(src) to .js(build) two command needed   
 1. create tsconfig.json file with this command : tsc --init  
 2. make changes in tsconfig.json for root derectory("rootDir": "./src") and output derectory("outDir": "./build/js")
-3. To watch all changes :   tsc -w
+3. To watch all changes eith this command :   tsc -w
