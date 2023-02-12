@@ -191,5 +191,56 @@ add4 = (num1,num2,num3=0)=>{
 let add5: Function;   
 add5 = (num1:number,num2:number,num3=0)=>{   
   return num1+num2+num3;   
-}    
+}
+##### Explore Type Aliases 
+##### For array     
+type  Myname = "Sojib" | "Saiful";   
+let myName:Myname = "Sojib";   
+type arr = Myname[];   
+const arr: arr = ["Sojib"];   
+type football = [string, string ,number,boolean,string];   
+let football:football = ["Messi", "Ronaldo", 3456, true, "hello"];   
+##### For function with signature   
+type Add5 = (num1: number, num2: number, num3?:number) => number;    
+let add5:Add5 = (num1,num2,num3=0)=>{    
+    return num1+num2+num3    
+  };    
+##### For Objects    
+type Address = {  
+    presentAddress: string;  
+    permanentAddress: string;  
+};  
+type Favorite = {  
+    type: "food" | "player" | "singer" | "actor";  
+    value: string;   
+}[];   
+type Person ={   
+    name: string;   
+    age: number;   
+    email:string;   
+    phone: string | string[];   
+    address: Address;   
+    favorites: Favorite;   
+};   
+const person: Person = {   
+    name: "John",   
+    age: 33,   
+    email: "imran@mail.com",   
+    phone: ["123"],   
+    address: {   
+        presentAddress: "example",   
+        permanentAddress: "example"   
+    },   
+    favorites: [   
+        {   
+            type: "food",     
+            value: "Biriyani"  
+        },   
+        {   
+            type: "player",   
+            value: "Messi"   
+        }   
+    ]   
+
+}  
 
