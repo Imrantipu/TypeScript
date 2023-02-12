@@ -93,3 +93,14 @@ const numberOrString = (value: number | string): string => {
     if (isNumber(value)) return 'number'
     return createError('This should never happen!')
 }
+
+// union type array  
+let players: (string | number | boolean)[];
+players = ["messi", 1234 , true];
+// union type specific type array only 
+let player: string[] | number[] | boolean[];
+player = [12 ,34 ,334];
+// Tuples for specific combination of data type
+let play: [string, number, boolean, string];
+play = ["tipu", 233, true, "Imran"];
+play[1] = 234;

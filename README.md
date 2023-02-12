@@ -139,4 +139,19 @@ const numberOrString = (value: number | string): string => {
 let age: number | string | boolean | [] = 56;
 ##### Only value as a type to access only that particular value  
 let myName: "Sojib" | "Saiful" = "Sojib";
-myName = "Saiful"
+myName = "Saiful"  
+#### Array       
+Array of string     
+let players: string[] = ["MEESSSI", "Ronaldo"]    
+##### union type array  
+let players: (string | number | boolean)[];    
+players = ["messi", 1234 , true];    
+##### union type specific type array only 
+let player: string[] | number[] | boolean[];   
+player = [12 ,34 ,334];   
+##### Tuples for specific combination of data type  
+let play: [string, number, boolean, string];   
+play = ["tipu", 233, true, "Imran"];   
+play[1] = 234;   
+
+
