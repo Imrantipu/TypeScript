@@ -104,3 +104,15 @@ player = [12 ,34 ,334];
 let play: [string, number, boolean, string];
 play = ["tipu", 233, true, "Imran"];
 play[1] = 234;
+
+// Objects with optional property and accessing the variable with optional chaining or not nul assertion  control undefined state of the property value
+let playerObject: {
+    name: string;
+    age?: number;
+    country: string;
+    married: boolean;
+    clubs?: string[];
+};
+
+playerObject.age = playerObject.age! + 5;
+playerObject.clubs = playerObject.clubs?.map()
