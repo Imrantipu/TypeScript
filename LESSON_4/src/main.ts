@@ -17,17 +17,17 @@ let myName: 'Dave'
 let userName: 'Dave' | 'John' | 'Amy'
 userName = 'Amy'
 
-// functions 
-const add = (a: number, b: number): number => {
-    return a + b
-}
+// // functions 
+// const add = (a: number, b: number): number => {
+//     return a + b
+// }
 //  function does not return any message 
 const logMsg = (message: any): void => {
     console.log(message)
 }
 
 logMsg('Hello!')
-logMsg(add(2, 3))
+// logMsg(add(2, 3))
 
 let subtract = function (c: number, d: number): number {
     return c - d
@@ -125,3 +125,35 @@ enum Friends {
 }
 console.log(Friends.API_Key);
 console.log(Friends[15]);
+// Functions 
+const add = (num1:number, num2:number): number =>{
+    return num1 + num2
+}
+const result = add(12,23);
+// function with optional value 
+const add1 = (num1:number, num2:number, num3?:number): number =>{
+    return num1 + num2+ (num3 || 0);
+}
+const result1 = add1(12,23);
+// function alternative of optional value  
+const add2 = (num1:number, num2:number, num3:number =0): number =>{
+    return num1 + num2+ num3;
+}
+const result2 = add1(12,23);
+//  Rest operator for working with many parameter and use call back function reduce
+const add3 = (...numbers: number[]):number =>{
+    const func = (pre:number,cur:number)=> pre+cur;
+    return numbers.reduce(func,0)
+}
+const result3 = add3(12,23,34,56,78);
+
+// Function signature const is not applicable
+let add4: (num1:number ,num2:number , num3?:number) => number;
+add4 = (num1,num2,num3=0)=>{
+  return num1+num2+num3
+}
+// Function type
+let add5: Function;
+add5 = (num1:number,num2:number,num3=0)=>{
+  return num1+num2+num3;
+}
