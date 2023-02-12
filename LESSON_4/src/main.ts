@@ -116,3 +116,12 @@ let playerObject: {
 
 playerObject.age = playerObject.age! + 5;
 playerObject.clubs = playerObject.clubs?.map()
+
+// enum to get fixed property value or getting property name by indexing property value  
+enum Friends {
+    Arif = 10,
+    kalam = 15,
+    API_Key = "api_key"
+}
+console.log(Friends.API_Key);
+console.log(Friends[15]);
