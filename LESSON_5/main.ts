@@ -37,3 +37,14 @@ class SomePoint implements Point{
 interface Point { x: number;}  
 interface Point {y: number;}
 const Point: Point = {x:1, y:2};
+
+const submitBtn = document.getElementById("submit-btn");
+const input = document.getElementById("input") as HTMLInputElement;
+
+const handleSubmit = (event: MouseEvent) =>{
+    const target = event.target as HTMLElement;
+    const p = document.createElement("p");
+    p.innerHTML = input?.value;
+    target?.parentNode?.appendChild(p);
+};
+submitBtn?.addEventListener("click", handleSubmit);
