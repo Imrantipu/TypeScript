@@ -299,5 +299,32 @@ class SomePoint implements Point{
 interface Point { x: number;}       
 interface Point {y: number;}    
 const Point: Point = {x:1, y:2};  
+##### (null, undefined ,any) type 
+interface User {
+    name: string;
+    email: string;
+}
+let user: User | null | undefined = null;
+##### Type ASSERTIONS(as)
+let use1 = {} as User;
+#### Literal types (value as type)
+let myName: 'Dave'  
+let userName: 'Dave' | 'John' | 'Amy'  
+userName = 'Amy'
 
-
+phone: string | string[]; 
+if (phone.isArray(phone)){
+    person.phone.map((val) => val.toLowerCase())
+}else{
+    phone.toLowerCase();
+}
+#### Literal Inference(as const) 
+const friends =["Arif", "John"] as const;
+interface Description {
+    Arif: string;
+    John: string;
+}
+let description: Description = {} as Description;
+friends.forEach((it) => {
+ description[it] = it + " on fire";
+});
